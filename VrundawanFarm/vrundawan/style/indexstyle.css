@@ -1,0 +1,51 @@
+/* indexstyle.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Adjust padding to control overall header height */
+    padding: 10px 10%; 
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 80px; /* Forces a consistent height */
+}
+
+.logo-image {
+    /* 60px to 70px is ideal for headers */
+    width: 85px;           
+    height: 85px;         
+    border-radius: 50%;    /* Perfect circle */
+    object-fit: cover;     /* Changed from contain to cover for better rounded fit */
+    /* border: 2px ?solid #2e7d32; Optional: adds a green farm-style border */
+    background-color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2e7d32; /* Match the farm theme green */
+}

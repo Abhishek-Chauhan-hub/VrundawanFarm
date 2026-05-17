@@ -1,0 +1,74 @@
+/* Slider Section */
+.slider-section {
+    padding: 20px 0; /* Adds space above and below the slider */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Slideshow container */
+.slider-container {
+    max-width: 1200px; /* Limits width on large screens */
+    position: relative;
+    margin: auto;
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Keeps images inside the border-radius */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3); /* Semi-transparent background */
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #2e7d32; /* Matches your header/farm theme green */
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s; /* Slightly faster fade for auto-scroll */
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

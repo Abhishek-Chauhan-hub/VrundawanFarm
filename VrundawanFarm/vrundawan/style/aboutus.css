@@ -1,0 +1,117 @@
+/* =========================================
+   About Us Page Styles
+   ========================================= */
+
+/* Main Container for About Page Content */
+.about-container {
+    padding: 60px 10%; /* General horizontal padding for large screens */
+    background-color: #fafdfa; /* A very light green, fresh background */
+}
+
+/* Base style for the layout rows (Flexbox) */
+.about-row {
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: space-between;
+    gap: 40px; /* Gap between text and image */
+    margin-bottom: 60px; /* Bottom spacing between rows */
+}
+
+
+
+/* The second section (inverse layout: image left, text right) */
+.inverse-row {
+    flex-direction: row-reverse;
+}
+
+/* Common style for text columns in About page */
+.about-text {
+    flex: 1.2; /* Text gets slightly more space */
+}
+
+.about-text h1, .about-text h2 {
+    color: #1b5e20; /* Darker, traditional Farm Green */
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #8bc34a; /* Light green underline accent */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8; /* Good readability for long text */
+    margin-bottom: 15px;
+}
+
+/* Common style for image columns in About page */
+.about-image {
+    flex: 1;
+    overflow: hidden; /* For rounded corners */
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Soft, premium shadow */
+    border: 5px solid white; /* A white frame effect */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Keeps image proportions perfect */
+    transition: transform 0.5s ease; /* Smooth hover zoom effect */
+}
+
+/* Hover effect on images */
+.about-image:hover img {
+    transform: scale(1.05); /* Slight zoom in on hover */
+}
+
+
+/* =========================================
+   Responsive Media Queries for About Page
+   ========================================= */
+
+/* On tablets and smaller laptops */
+@media (max-width: 992px) {
+    .about-container {
+        padding: 40px 5%; /* Less horizontal padding */
+    }
+    
+    .about-text h1 {
+        font-size: 28px;
+    }
+    .about-text p {
+        font-size: 16px;
+    }
+}
+
+/* On mobile phones (Stacking columns vertically) */
+@media (max-width: 768px) {
+    /* Force both rows to stack vertically */
+    .about-row, .inverse-row {
+        flex-direction: column;
+        gap: 20px; /* Smaller gap */
+        margin-bottom: 40px;
+    }
+    
+    /* Make text and image take full width */
+    .about-text, .about-image {
+        width: 100%;
+        flex: auto; /* Reset flex values */
+    }
+    
+    .about-text h1, .about-text h2 {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    
+    .about-image {
+        max-height: 350px; /* Limit image height on small screens */
+    }
+}
